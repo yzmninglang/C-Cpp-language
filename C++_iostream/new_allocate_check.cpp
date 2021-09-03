@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;	
+int main(){
+	int *p;
+	p = new int ;
+	if(!p)
+	{
+		cout<<"allocaiton failure\n";
+		return 1;
+	}
+	*p = 20 ;
+	cout <<*p;
+	delete p;
+	return 0;
+}

@@ -224,7 +224,7 @@ category: coding
 
   Union 's data is shared for all member ,so one of they is changed ,others will be effected,but the process is how to go
 
-  ![image-20210903113323946](../../Machine%20learning/deeplearning.ai-andrew-ng-master/COURSE%203%20Structuring%20Machine%20Learning%20Projects/README.assets/image-20210903113323946.png)
+  ![image-20210903113323946](https://picturnl.oss-cn-shanghai.aliyuncs.com/image-20210903113323946.png)
 
 * Using union 
 
@@ -268,6 +268,112 @@ category: coding
   		}
   	}
   	return 0;
+  }
+  ```
+
+#  Quote
+
+* definition 
+
+  give variables a another name after quoted ,the two variables are equivalent when one of them changed ,the other will change 
+
+  ```c
+  int i =5;
+  int &j = i;		//delcare j is a integer quote ,and initialize j with i
+  ```
+
+  but j definited in following way is not allowed:
+
+  ```c
+  int i;
+  int &j;			//incorrect j is not linked some variables
+  j = i;
+  ```
+
+* quote and pointer 
+
+  quote is another name for a variable ,but pointer is a tool pointing to variable 
+
+  ```c
+  #include<iostream>
+  using namespace std;
+  int main()
+  {
+  	int i=15;
+  	int *iptr=&i;			//define a pointer 
+  	int &rptr = i;			//define a quote 
+  	cout<<"I is "<<i<<endl;
+  	cout<<"*iptr is  "<<*iptr<<endl;
+  	cout<<"rptr is "<<rptr<<endl;
+  	i=29;
+  	cout<<"After changing i to 29:"<<endl;
+  	cout<<"i is "<<i<<endl;
+  	cout<<"*iptr is  "<<*iptr<<endl;
+  	cout<<"rptr is "<<rptr<<endl;
+  	return 0;
+  }
+  ```
+
+  quote: No need `&` ,pointer : Need `*` .
+
+* warn
+
+  ```c
+  int i,k;
+  int &j =i;
+  j =&k;   		//incorrect , delcare j is the quotation of k is not allowed 
+  ```
+
+  ```c
+  void &r = 10; 	//incorrect, void type is not allow 
+  int &r = 10 ; 	//incorrect,can't assign quote "r" with value
+  
+  //can't quote array
+  int a[4] = "amd";
+  int &a[4] = a;
+  
+  
+  //can't define quotation to quotation
+  int n=3;
+  int && r =n;
+  int &*p = n;
+  ```
+
+* used as parameters of function
+
+  ```c
+  #include<iostream>
+  using namespace std;
+  void swap(int &a,int &b)
+  {
+  	int temp =a;
+  	a =b;
+  	b =temp;
+  }
+  int main(){
+  	int a=5,b=10;
+  	cout<<"a="<<a<<" "<<"b="<<b;
+  	swap(a,b);
+  	cout<<"a="<<a<<" "<<"b="<<b;
+  	return 0;
+  }
+  ```
+
+  quotation is used as formal parameter for function variable transfer,but it seem that we have really passed a,b into the function "swap"
+
+  ```c
+  #include<iostream>
+  using namespace std;
+  int a[] = {1,3,5,6,7,3};
+  int &index(int);
+  int main(){
+  	index(1)=100;		//in fact ,because the return of funciton is not a number ,but a[i]
+  	cout<<"a[1]="<<a[1]<<endl;
+  	return 0;
+  	
+  }
+  int &index(int i){
+  	return a[i];
   }
   ```
 

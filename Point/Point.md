@@ -1,5 +1,5 @@
 ---
-title: Point
+title: Pointer
 category: coding
 ---
 
@@ -194,6 +194,27 @@ p = new int ; //new dynamically allocate an integer memory space,assign the firs
 
 
 delete p;   	//free the space allocated by new
+```
+
+`new` assign space for multidimensional array:
+
+```c
+int i = 3;
+int *pi = new int[3][4];
+```
+
+`new` assign space with initial value:
+
+```c
+#include<iostream>
+using namespace std;
+int main(){
+	int *p;
+	p = new int(99);      //initial value
+	cout<<*p;
+	delete p;
+	return 0;
+}
 ```
 
 
