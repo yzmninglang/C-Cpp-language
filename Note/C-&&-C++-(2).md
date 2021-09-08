@@ -135,6 +135,28 @@ class Complex{
 }
 ```
 
+* member initialization list
+
+member initialized by the order they are declared 
+
+```c
+#include<iostream>
+using namespace std;
+class D{
+	public:
+		D(int i):mem2(i),mem1(mem2+1){
+			cout<<"mem1="<<mem1<<" "<<"mem2="<<mem2<<endl;
+		}
+	private:
+		int mem1;		//mem1 defined firstly
+		int mem2;		//mem2 defined secondly
+};
+int main(){
+	D d(15);
+	return 0;
+}
+```
+
 
 
 
