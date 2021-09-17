@@ -157,7 +157,9 @@ int main(){
 }
 ```
 
+# Inherit
 
+If base class 
 
 
 
