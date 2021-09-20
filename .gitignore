@@ -3,3 +3,4 @@
 *.opt
 *.plg
 *.dsw
+Qt/*Desktop*/
