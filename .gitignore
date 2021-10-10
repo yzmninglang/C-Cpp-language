@@ -4,3 +4,5 @@
 *.plg
 *.dsw
 Qt/*Desktop*/
+ysu/p4/Release/
+ysu/p4/Debug/
