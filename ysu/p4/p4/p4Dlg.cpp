@@ -99,9 +99,7 @@ HCURSOR Cp4Dlg::OnQueryDragIcon()
 
 
 
-void Cp4Dlg::OnBnClickedOk()
-{
-	CString uid ,pw;
+
 	//CString n1;
 	//userinfo us1;
 	//us1.load();
@@ -111,23 +109,24 @@ void Cp4Dlg::OnBnClickedOk()
 	//if ((pw==uid)){
 	//	
 	//}
-	Cp4App * pApp= (Cp4App *)AfxGetApp();
+
 	//pApp->m_PerArray();
 	//pApp->curper=new person(CString("yuzhimin"),CString("1234"),CString("1234"),100);
 
+void Cp4Dlg::OnBnClickedOk()
+{
+	CString uid ,pw;
+	Cp4App * pApp= (Cp4App *)AfxGetApp();
 	GetDlgItemText(IDC_EDIT2,uid);
 	GetDlgItemText(IDC_EDIT1,pw);
-	string usid = CT2A(uid.GetBuffer()); 
-	string pwd = CT2A(pw.GetBuffer());
-	pApp->login(person(CString("yuzhimin"),uid,pw,0));
-	//pApp->current=pApp->perlist[0];
+	pApp->login(person(CString(" "),uid,pw,0));
 	if(pApp->current!=NULL){
-	SystemCate *p =new SystemCate;
-	pApp->save();
-	p->DoModal();
+		SystemCate *p =new SystemCate;	
+		p->DoModal();	
 	}
 	else{
 		mtext.SetWindowText(TEXT("Please Check your userid and password!"));
+	
 	}
 }
 
