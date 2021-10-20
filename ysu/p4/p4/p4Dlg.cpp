@@ -11,6 +11,7 @@
 #include "userinfo.h"
 #include<string>
 #include<iostream>
+//#include"yuzhimin.h"
 using namespace std;
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -123,6 +124,8 @@ void Cp4Dlg::OnBnClickedOk()
 	//pApp->current=pApp->perlist[0];
 	if(pApp->current!=NULL){
 	SystemCate *p =new SystemCate;
+	//yuzhimin yu;
+	//yu.DoModal();
 	pApp->save();
 	p->DoModal();
 	}

@@ -1,0 +1,16 @@
+﻿生成启动时间为 10/14/2021 2:27:03 PM。
+     1>项目“E:\C-Cpp-language\ysu\p1cmd\p1cmd\p1cmd.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\p1cmd.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         D:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ThreeProject.cpp atm.cpp
+         atm.cpp
+     1>d:\vs2010\vc\include\string(14): error C2143: 语法错误 : 缺少“;”(在“namespace”的前面)
+         ThreeProject.cpp
+     1>e:\c-cpp-language\ysu\p1cmd\p1cmd\threeproject.cpp(5): error C2143: 语法错误 : 缺少“;”(在“using”的前面)
+         正在生成代码...
+     1>已完成生成项目“E:\C-Cpp-language\ysu\p1cmd\p1cmd\p1cmd.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.46
