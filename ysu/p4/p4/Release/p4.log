@@ -1,0 +1,36 @@
+﻿生成启动时间为 10/10/2021 10:23:58 AM。
+     1>项目“E:\Document\Visual Studio 2010\Projects\p4\p4\p4.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Release\p4.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         所有输出均为最新。
+       ResourceCompile:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /l"0x0804" /IRelease\ /nologo /fo"Release\p4.res" p4.rc 
+       Link:
+         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\p4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.lib" /MACHINE:X86 Release\p4.res
+         Release\balan.obj
+         Release\ChangePassWord.obj
+         Release\dspoit.obj
+         Release\p4.obj
+         Release\p4Dlg.obj
+         Release\person.obj
+         Release\qury.obj
+         Release\stdafx.obj
+         Release\SystemCate.obj
+         Release\tranf.obj
+         Release\trans.obj
+         Release\wdraw.obj
+         正在生成代码
+         已完成代码的生成
+         p4.vcxproj -> E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe;#1" /manifest Release\p4.exe.intermediate.manifest D:\VS2010\VC\Include\Manifest\dpiaware.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\p4.unsuccessfulbuild”。
+         正在对“Release\p4.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Document\Visual Studio 2010\Projects\p4\p4\p4.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.92
