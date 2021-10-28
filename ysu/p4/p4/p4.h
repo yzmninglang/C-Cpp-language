@@ -1,19 +1,18 @@
 
-// p4.h : PROJECT_NAME 应用程序的主头文件
-//
 #define FILENAME "data.txt"
+#include <vector>
+#define HISFILE "history.txt"
+#include "history.h"
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "在包含此文件之前包含“stdafx.h”以生成 PCH 文件"
+	#error "鍦ㄥ寘鍚鏂囦欢涔嬪墠鍖呭惈鈥渟tdafx.h鈥濅互鐢熸垚 PCH 鏂囦欢"
 #endif
 
-#include "resource.h"		// 主符号
+#include "resource.h"		
 #include "person.h"
 #include <fstream>
-// Cp4App:
-// 有关此类的实现，请参阅 p4.cpp
-//
+
 
 class Cp4App : public CWinApp
 {
@@ -25,6 +24,7 @@ public:
 	bool withd(int m);
 	void login(person p);
 	int find(CString id);
+	void create(person *p);
 	bool trans(int index,int money);
 	int num;
 	int tran_p;
@@ -32,13 +32,12 @@ public:
 	person *current;
 	void load();
 	~Cp4App();
+	vector<history> his;
 
-// 重写
+// 锟斤拷写
 public:
 	virtual BOOL InitInstance();
-
-// 实现
-
+	string gettime();
 	DECLARE_MESSAGE_MAP()
 };
 

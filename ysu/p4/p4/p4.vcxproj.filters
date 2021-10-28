@@ -66,6 +66,18 @@
     <ClInclude Include="balan.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="reg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="history.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="qhis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="receipt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="p4.cpp">
@@ -102,6 +114,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="balan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="reg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qhis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="receipt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

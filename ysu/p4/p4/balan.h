@@ -1,24 +1,24 @@
 #pragma once
 
 
-// balan ¶Ô»°¿ò
+// balan ï¿½Ô»ï¿½ï¿½ï¿½
 
 class balan : public CDialogEx
 {
 	DECLARE_DYNAMIC(balan)
 
 public:
-	balan(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êý
+	balan(CWnd* pParent = NULL);   // ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	virtual ~balan();
 	virtual void OnClose();
 	BOOL OnInitDialog();
 	Cp4App * pApp;
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_DIALOG9 };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§ï¿½ï¿½
 
 	DECLARE_MESSAGE_MAP()
 public:

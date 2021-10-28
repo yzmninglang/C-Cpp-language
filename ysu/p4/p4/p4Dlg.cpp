@@ -9,6 +9,7 @@
 #include "afxdialogex.h"
 #include "SystemCate.h"
 #include "userinfo.h"
+#include "reg.h"
 #include<string>
 #include<iostream>
 using namespace std;
@@ -42,6 +43,7 @@ BEGIN_MESSAGE_MAP(Cp4Dlg, CDialogEx)
 	ON_BN_CLICKED(IDOK, &Cp4Dlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &Cp4Dlg::OnBnClickedCancel)
 	ON_STN_CLICKED(Text_Box, &Cp4Dlg::OnStnClickedBox)
+	ON_BN_CLICKED(IDCANCEL2, &Cp4Dlg::OnBnClickedCancel2)
 END_MESSAGE_MAP()
 
 
@@ -117,8 +119,10 @@ void Cp4Dlg::OnBnClickedOk()
 
 	GetDlgItemText(IDC_EDIT2,uid);
 	GetDlgItemText(IDC_EDIT1,pw);
-	string usid = CT2A(uid.GetBuffer()); 
-	string pwd = CT2A(pw.GetBuffer());
+	//string usid = CT2A(uid.GetBuffer()); 
+	//string pwd = CT2A(pw.GetBuffer());
+	//uid = "12345";
+	//pw ="12345";
 	pApp->login(person(CString("yuzhimin"),uid,pw,0));
 	//pApp->current=pApp->perlist[0];
 	if(pApp->current!=NULL){
@@ -143,5 +147,13 @@ void Cp4Dlg::OnBnClickedCancel()
 
 void Cp4Dlg::OnStnClickedBox()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼þÍ¨Öª´¦Àí³ÌÐò´úÂë
+}
+
+
+void Cp4Dlg::OnBnClickedCancel2()
+{
+	// TODO: Add your control notification handler code here
+	reg *p =new reg;
+	p->DoModal();
+
 }

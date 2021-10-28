@@ -124,7 +124,7 @@ void tranf::OnBnClickedButton8()
 	BOOL i =this->pApp->trans(this->pApp->tran_p,this->tnum);
 	CString p;
 	p.Format(_T("Successfully tranform %d RMB"),this->tnum);
-	if(i==true)
+	if(i==TRUE)
 	{
 		SetDlgItemText(qq,p);
 	}

@@ -75,6 +75,7 @@ void dspoit::OnBnClickedButton1()
 	Cp4App * pApp= (Cp4App *)AfxGetApp();
 	SetDlgItemText(dmoney,_T("Successfully top up 100 RMB"));
 	pApp->current->money+=100;
+	writehis(100);
 }
 
 
@@ -84,6 +85,7 @@ void dspoit::OnBnClickedButton4()
 	Cp4App * pApp= (Cp4App *)AfxGetApp();
 	SetDlgItemText(dmoney,_T("Successfully top up 200 RMB"));
 	pApp->current->money+=200;
+	writehis(200);
 }
 
 
@@ -93,6 +95,7 @@ void dspoit::OnBnClickedButton5()
 	Cp4App * pApp= (Cp4App *)AfxGetApp();
 	SetDlgItemText(dmoney,_T("Successfully top up 1000 RMB"));
 	pApp->current->money+=1000;
+	writehis(1000);
 }
 
 
@@ -102,6 +105,7 @@ void dspoit::OnBnClickedButton2()
 	Cp4App * pApp= (Cp4App *)AfxGetApp();
 	SetDlgItemText(dmoney,_T("Successfully top up 500 RMB"));
 	pApp->current->money+=500;
+	writehis(500);
 }
 
 
@@ -109,6 +113,15 @@ void dspoit::OnBnClickedButton3()
 {
 	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼þÍ¨Öª´¦Àí³ÌÐò´úÂë
 	Cp4App * pApp= (Cp4App *)AfxGetApp();
-	SetDlgItemText(dmoney,_T("Successfully top up 200 RMB"));
-	pApp->current->money+=200;
+	SetDlgItemText(dmoney,_T("Successfully top up 2000 RMB"));
+	pApp->current->money+=2000;
+	writehis(2000);
+}
+void dspoit::writehis(int money)
+{
+	Cp4App * pApp= (Cp4App *)AfxGetApp();
+	string his="dspoit";
+	pApp->his.push_back(history(pApp->gettime(),pApp->current->uid.GetString(),his,money));
+
+
 }

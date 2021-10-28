@@ -103,10 +103,14 @@
     <ClInclude Include="balan.h" />
     <ClInclude Include="ChangePassWord.h" />
     <ClInclude Include="dspoit.h" />
+    <ClInclude Include="history.h" />
     <ClInclude Include="p4.h" />
     <ClInclude Include="p4Dlg.h" />
     <ClInclude Include="person.h" />
+    <ClInclude Include="qhis.h" />
     <ClInclude Include="qury.h" />
+    <ClInclude Include="receipt.h" />
+    <ClInclude Include="reg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemCate.h" />
@@ -122,7 +126,10 @@
     <ClCompile Include="p4.cpp" />
     <ClCompile Include="p4Dlg.cpp" />
     <ClCompile Include="person.cpp" />
+    <ClCompile Include="qhis.cpp" />
     <ClCompile Include="qury.cpp" />
+    <ClCompile Include="receipt.cpp" />
+    <ClCompile Include="reg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

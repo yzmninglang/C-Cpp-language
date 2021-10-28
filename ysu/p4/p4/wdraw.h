@@ -2,23 +2,23 @@
 #include "afxwin.h"
 
 
-// wdraw ¶Ô»°¿ò
+// wdraw ï¿½Ô»ï¿½ï¿½ï¿½
 
 class wdraw : public CDialogEx
 {
 	DECLARE_DYNAMIC(wdraw)
 
 public:
-	wdraw(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êý
+	wdraw(CWnd* pParent = NULL);   // ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	virtual ~wdraw();
 	void OnClose();
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_DIALOG7 };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
-
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§ï¿½ï¿½
+	Cp4App * pApp;
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton8();

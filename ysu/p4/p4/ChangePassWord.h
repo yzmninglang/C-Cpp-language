@@ -1,21 +1,21 @@
 #pragma once
 
 
-// ChangePassWord ¶Ô»°¿ò
+// ChangePassWord ï¿½Ô»ï¿½ï¿½ï¿½
 
 class ChangePassWord : public CDialogEx
 {
 	DECLARE_DYNAMIC(ChangePassWord)
 
 public:
-	ChangePassWord(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êý
+	ChangePassWord(CWnd* pParent = NULL);   // ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	virtual ~ChangePassWord();
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_DIALOG2 };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§ï¿½ï¿½
 
 	DECLARE_MESSAGE_MAP()
 public:

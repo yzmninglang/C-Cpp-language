@@ -30,4 +30,5 @@ public:
 
 	CEdit qname;
 	CEdit qcard;
+	afx_msg void OnBnClickedButton2();
 };

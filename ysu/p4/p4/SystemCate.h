@@ -16,7 +16,7 @@ public:
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
-
+	Cp4App *pApp;
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnClose();

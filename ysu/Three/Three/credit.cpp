@@ -9,3 +9,8 @@ bool credit::withdraw(int money)
 	this->money-=money;
 	return true;
 }
+void credit::show()
+{
+	cout<<"credit\n";
+
+}

@@ -7,7 +7,7 @@
 #include "afxdialogex.h"
 #include "person.h"
 #include "balan.h"
-
+#include "qhis.h"
 
 // qury 对话框
 
@@ -42,6 +42,7 @@ BEGIN_MESSAGE_MAP(qury, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON3, &qury::OnBnClickedButton3)
 	ON_BN_CLICKED(IDC_BUTTON1, &qury::OnBnClickedButton1)
 	ON_STN_CLICKED(IDC_STATIC_card, &qury::OnStnClickedStaticcard)
+	ON_BN_CLICKED(IDC_BUTTON2, &qury::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -95,4 +96,12 @@ void qury::OnBnClickedButton1()
 void qury::OnStnClickedStaticcard()
 {
 	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼þÍ¨Öª´¦Àí³ÌÐò´úÂë
+}
+
+
+void qury::OnBnClickedButton2()
+{
+	// TODO: Add your control notification handler code here
+	qhis *p= new qhis;
+	p->DoModal();
 }

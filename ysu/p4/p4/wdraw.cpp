@@ -5,6 +5,7 @@
 #include "p4.h"
 #include "wdraw.h"
 #include "afxdialogex.h"
+#include "receipt.h"
 
 
 // wdraw 对话框
@@ -14,7 +15,7 @@ IMPLEMENT_DYNAMIC(wdraw, CDialogEx)
 wdraw::wdraw(CWnd* pParent /*=NULL*/)
 	: CDialogEx(wdraw::IDD, pParent)
 {
-
+		pApp= (Cp4App *)AfxGetApp();
 }
 
 wdraw::~wdraw()
@@ -73,11 +74,9 @@ void wdraw::OnBnClickedButton1()
 
 void wdraw::OnBnClickedButton7()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼þÍ¨Öª´¦Àí³ÌÐò´úÂë
 	CString money;
 	wmoney.GetWindowText(money);
-	Cp4App * pApp= (Cp4App *)AfxGetApp();
-	if(pApp->current->money<_ttoi(money))
+	if(pApp->current->money<_ttoi(money) || money=="Insufficient balance")
 	{
 		wmoney.SetWindowText(_T("Insufficient balance"));
 	}
@@ -85,6 +84,8 @@ void wdraw::OnBnClickedButton7()
 	{
 		wmoney.SetWindowText(_T("Success!"));
 		pApp->current->money=pApp->current->money-_ttoi(money);
+		string his="withdraw";
+		pApp->his.push_back(history(pApp->gettime(),pApp->current->uid.GetString(),his,_ttoi(money)));
 	}
 }
 
@@ -112,5 +113,7 @@ void wdraw::OnBnClickedButton4()
 
 void wdraw::OnBnClickedButton5()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼þÍ¨Öª´¦Àí³ÌÐò´úÂë
+	receipt *p =new receipt;
+	p->DoModal();
+
 }

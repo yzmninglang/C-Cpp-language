@@ -1,32 +1,32 @@
 
-// p4Dlg.h : Í·ÎÄ¼þ
+// p4Dlg.h : Í·ï¿½Ä¼ï¿½
 //
 
 #pragma once
 #include "afxwin.h"
 #include "resource.h"
 
-// Cp4Dlg ¶Ô»°¿ò
+// Cp4Dlg ï¿½Ô»ï¿½ï¿½ï¿½
 class Cp4Dlg : public CDialogEx
 {
-// ¹¹Ôì
+// ï¿½ï¿½ï¿½ï¿½
 public:
-	Cp4Dlg(CWnd* pParent = NULL);	// ±ê×¼¹¹Ôìº¯Êý
+	Cp4Dlg(CWnd* pParent = NULL);	// ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_P4_DIALOG };
 	CImage img;
 	CRect rect;
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Ö§ï¿½ï¿½
 
 
-// ÊµÏÖ
+// Êµï¿½ï¿½
 protected:
 	HICON m_hIcon;
 
-	// Éú³ÉµÄÏûÏ¢Ó³Éäº¯Êý
+	// ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½Ï¢Ó³ï¿½äº¯ï¿½ï¿½
 	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
@@ -38,4 +38,5 @@ public:
 	CEdit m_uid;
 	afx_msg void OnStnClickedBox();
 	CStatic m_imag;
+	afx_msg void OnBnClickedCancel2();
 };

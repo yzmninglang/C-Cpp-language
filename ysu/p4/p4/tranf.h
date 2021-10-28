@@ -2,7 +2,7 @@
 #include "afxwin.h"
 
 
-// tranf ¶Ô»°¿ò
+// tranf ï¿½Ô»ï¿½ï¿½ï¿½
 
 class tranf : public CDialogEx
 {
@@ -12,15 +12,15 @@ public:
 	Cp4App * pApp;
 	void OnClose();
 	int tnum;
-	tranf(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êý
+	tranf(CWnd* pParent = NULL);   // ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	virtual ~tranf();
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_DIALOG8 };
 	virtual BOOL OnInitDialog();
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§ï¿½ï¿½
 
 	DECLARE_MESSAGE_MAP()
 public:

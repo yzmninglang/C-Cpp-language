@@ -14,6 +14,10 @@ void card::changepwd(string np)
 	this->pwd=np;
 
 }
+bool card::withdraw(int money)
+{
+	return false;
+}
 bool card::trans(int money)
 {
 

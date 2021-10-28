@@ -20,7 +20,7 @@ IMPLEMENT_DYNAMIC(SystemCate, CDialogEx)
 SystemCate::SystemCate(CWnd* pParent /*=NULL*/)
 	: CDialogEx(SystemCate::IDD, pParent)
 {
-
+	this->pApp=(Cp4App *)AfxGetApp();
 }
 
 SystemCate::~SystemCate()
@@ -63,13 +63,12 @@ BOOL SystemCate::OnInitDialog()
 {
 
 	CDialogEx::OnInitDialog();
+	CString m="Welcome to linkwe bank,";
+	SetDlgItemText(usern,m+this->pApp->current->name);
+	SetDlgItemText(userpw,this->pApp->current->uid);
+	
 
-
-
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
-
-	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôÐÔÒ³Ó¦·µ»Ø FALSE
+	return TRUE;  
 }
 
 

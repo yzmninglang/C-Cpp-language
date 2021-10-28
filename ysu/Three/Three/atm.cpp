@@ -7,9 +7,9 @@ atm::atm()
 {
 	readfile();
 	this->current=NULL;
-	//for(vector<card>::iterator it=alu.begin();it!=alu.end();it++)
+	//for(vector<card*>::iterator it=alu.begin();it!=alu.end();it++)
 	//{
-	//	it->show();
+	//	(*it)->show();
 	//}
 
 }
@@ -20,7 +20,8 @@ void atm::readfile()
 	ifs.open(FILENAME,ios::in);
 	if(!ifs.is_open())
 	{
-		alu.push_back(credit("yuzhimin","1234","1234"));
+		credit *p = new credit("yuzhimin","1234","1234");
+		alu.push_back(p);
 	
 	}
 	else
@@ -31,11 +32,13 @@ void atm::readfile()
 		{
 			if(ty==0)
 			{
-				alu.push_back(credit(name,id,pw,money,ty));
+				card *p= new credit(name,id,pw,money,ty);
+				alu.push_back(p);
 			}
 			else
 			{
-				alu.push_back(debit(name,id,pw,money,ty));
+				card *p= new debit(name,id,pw,money,ty);
+				alu.push_back(p);
 			}
 		}
 	
@@ -141,19 +144,22 @@ void atm::login()
 		}
 		cout<<"pw:";
 		cin>>pw;
-		for(vector<card>::iterator it=alu.begin();it!=alu.end();it++)
+		for(vector<card*>::iterator it=alu.begin();it!=alu.end();it++)
 		{
-			if(it->uid==id && it->pwd==pw)
+			if((*it)->uid==id && (*it)->pwd==pw)
 			{
-				//it->show();
-				this->current=& *it;
+				
+				this->current=*it;
 				this->showmenu();
+				
 			}
-			if(it->uid==id && it->pwd!=pw)
+			if((*it)->uid==id && (*it)->pwd!=pw)
 			{
-				lockc=&*it;
+				lockc=*it;
 			}
-			//it->show();
+	/*		(*it)->show();
+			system("pause");*/
+			//(*it)->show();
 			//system("pause");
 		}
 		times--;
@@ -185,13 +191,16 @@ void atm::create()
 	cin>>pwd;
 	if(choice==1)
 	{
-		this->alu.push_back(credit(name,uid,pwd));
+		credit *p=new credit(name,uid,pwd);
+		this->alu.push_back(p);
 	}
 	else
 	{
-		this->alu.push_back(debit(name,uid,pwd));
+		debit *p=new debit(name,uid,pwd);
+		this->alu.push_back(p);
 	}
 	cout<<"Success!";
+	this->save();
 	system("pause");
 	return;
 }
@@ -216,6 +225,7 @@ void atm::disposit()
 		his2=his1.str();
 		
 		this->his.push_back(history(gettime(),this->current->uid,his2));
+		this->save();
 	}
 	
 }
@@ -266,6 +276,7 @@ void atm::tranfs()
 				his2=his1.str();
 				
 				this->his.push_back(history(gettime(),this->current->uid,his2));
+				this->save();
 			}
 			else
 			{
@@ -280,13 +291,13 @@ void atm::tranfs()
 }
 void atm::find(string uid)
 {
-	for(vector<card>::iterator it=alu.begin();it!=alu.end();it++)
+	for(vector<card*>::iterator it=alu.begin();it!=alu.end();it++)
 	{
-		//cout<<it->uid;
-		if(it->uid==uid)
+		//cout<<(*it)->uid;
+		if((*it)->uid==uid)
 		{
-			//cout<<it->uid;
-			this->tran=& *it;
+			//cout<<(*it)->uid;
+			this->tran=*it;
 			return;
 		}
 	}
@@ -299,10 +310,8 @@ void atm::withdraw()
 	int money;
 	cout<<"Please input the money you want to withdraw:";
 	cin>>money;
-	if(this->current->type==0)
+	if(this->current->withdraw(money))
 	{
-		credit *m=(credit *)this->current;
-		m->withdraw(money);
 		stringstream his1;
 		his1<<" withdraw_"<<money;
 		string his2;
@@ -310,25 +319,45 @@ void atm::withdraw()
 		this->his.push_back(history(gettime(),this->current->uid,his2));
 		cout<<"success ,you have withdraw "<<money<<endl;
 		system("pause");
+		this->save();
 	}
 	else
 	{
-		debit *m=(debit *)this->current;
-		if(!m->withdraw(money))
-		{
-			cout<<"Sorry ,Insufficient balance";
-			system("pause");
-			return;
-		}
-		cout<<"success ,you have withdraw "<<money<<endl;
-		stringstream his1;
-		his1<<" withdraw_"<<money;
-		string his2;
-		his2=his1.str();
-		this->his.push_back(history(gettime(),this->current->uid,his2));
+		cout<<"Sorry ,Insufficient balance";
 		system("pause");
 		return;
 	}
+	//if(this->current->type==0)
+	//{
+	//	//credit *m=(credit *)this->current;
+	//	//m->withdraw(money);
+	//	this->current->withdraw(money);
+	//	stringstream his1;
+	//	his1<<" withdraw_"<<money;
+	//	string his2;
+	//	his2=his1.str();
+	//	this->his.push_back(history(gettime(),this->current->uid,his2));
+	//	cout<<"success ,you have withdraw "<<money<<endl;
+	//	system("pause");
+	//}
+	//else
+	//{
+	//	debit *m=(debit *)this->current;
+	//	if(!m->withdraw(money))
+	//	{
+	//		cout<<"Sorry ,Insufficient balance";
+	//		system("pause");
+	//		return;
+	//	}
+	//	cout<<"success ,you have withdraw "<<money<<endl;
+	//	stringstream his1;
+	//	his1<<" withdraw_"<<money;
+	//	string his2;
+	//	his2=his1.str();
+	//	this->his.push_back(history(gettime(),this->current->uid,his2));
+	//	system("pause");
+	//	return;
+	//}
 
 }
 void atm::changepwd()
@@ -343,6 +372,7 @@ void atm::changepwd()
 		this->current->changepwd(pw1);
 		cout<<"success"<<endl;
 		system("pause");
+		this->save();
 		return;
 	}
 	else
@@ -363,13 +393,13 @@ void atm::save()
 {
 	ofstream ofs;
 	ofs.open(FILENAME,ios::out);
-	for(vector<card>::iterator it=alu.begin();it!=alu.end();it++)
+	for(vector<card*>::iterator it=alu.begin();it!=alu.end();it++)
 	{
-		ofs<<it->name<<" "
-			<<it->uid<<" "
-			<<it->pwd<<" "
-			<<it->money<<" "
-			<<it->type<<'\n';
+		ofs<<(*it)->name<<" "
+			<<(*it)->uid<<" "
+			<<(*it)->pwd<<" "
+			<<(*it)->money<<" "
+			<<(*it)->type<<'\n';
 	}
 	ofs.close();
 	ofs.open(HISFILE,ios::out);

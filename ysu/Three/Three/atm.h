@@ -27,7 +27,7 @@ public:
 	void find(string uid);
 	string gettime();
 protected:
-	vector<card> alu;
+	vector<card*> alu;
 	vector<history> his;
 	card *current;
 	card *tran;

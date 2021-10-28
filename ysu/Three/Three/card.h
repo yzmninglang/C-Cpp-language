@@ -9,7 +9,8 @@ public:
 	card(string na,string ui,string pw,int mo,int typ);
 	//virtual void showMenu();
 	void changepwd(string newpw);
-	void show();
+	virtual void show();
+	virtual bool withdraw(int money);
 	void despoit(int money);
 	bool trans(int money);
 protected:

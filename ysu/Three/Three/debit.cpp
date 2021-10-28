@@ -13,3 +13,9 @@ bool debit::withdraw(int money)
 	this->money-=money;
 	return true;
 }
+
+void debit::show()
+{
+	cout<<"debit\n";
+
+}

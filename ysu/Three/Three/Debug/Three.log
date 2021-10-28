@@ -1,32 +1,32 @@
-﻿生成启动时间为 10/20/2021 10:31:57 PM。
-     1>项目“E:\MSVS\Three\Three\Three.vcxproj”在节点 2 上(build 个目标)。
+﻿Build started 10/28/2021 8:34:30 PM.
+     1>Project "E:\C-Cpp-language\ysu\Three\Three\Three.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         正在创建“Debug\Three.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+         Creating "Debug\Three.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          D:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt atm.cpp
          atm.cpp
-     1>e:\msvs\three\three\atm.cpp(401): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\vs2010\vc\include\time.inl(112) : 参见“localtime”的声明
+     1>e:\c-cpp-language\ysu\three\three\atm.cpp(431): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\vs2010\vc\include\time.inl(112) : see declaration of 'localtime'
        ManifestResourceCompile:
-         所有输出均为最新。
+         All outputs are up-to-date.
        Link:
-         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\MSVS\Three\Debug\Three.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Three.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\MSVS\Three\Debug\Three.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\MSVS\Three\Debug\Three.lib" /MACHINE:X86 Debug\Three.exe.embed.manifest.res
+         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\C-Cpp-language\ysu\Three\Debug\Three.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Three.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\C-Cpp-language\ysu\Three\Debug\Three.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\C-Cpp-language\ysu\Three\Debug\Three.lib" /MACHINE:X86 Debug\Three.exe.embed.manifest.res
          Debug\card.obj
          Debug\credit.obj
          Debug\debit.obj
          Debug\main.obj
          Debug\atm.obj
        Manifest:
-         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Three.exe.embed.manifest" /manifest Debug\Three.exe.intermediate.manifest
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Three.exe.embed.manifest" /manifest Debug\Three.exe.intermediate.manifest
+         All outputs are up-to-date.
        LinkEmbedManifest:
-         所有输出均为最新。
-         Three.vcxproj -> E:\MSVS\Three\Debug\Three.exe
+         All outputs are up-to-date.
+         Three.vcxproj -> E:\C-Cpp-language\ysu\Three\Debug\Three.exe
        FinalizeBuildStatus:
-         正在删除文件“Debug\Three.unsuccessfulbuild”。
-         正在对“Debug\Three.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\MSVS\Three\Three\Three.vcxproj”(build 个目标)的操作。
+         Deleting file "Debug\Three.unsuccessfulbuild".
+         Touching "Debug\Three.lastbuildstate".
+     1>Done Building Project "E:\C-Cpp-language\ysu\Three\Three\Three.vcxproj" (build target(s)).
 
-生成成功。
+Build succeeded.
 
-已用时间 00:00:00.78
+Time Elapsed 00:00:00.81

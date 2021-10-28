@@ -2,21 +2,22 @@
 #include "afxwin.h"
 
 
-// dspoit ¶Ô»°¿ò
+// dspoit ï¿½Ô»ï¿½ï¿½ï¿½
 
 class dspoit : public CDialogEx
 {
 	DECLARE_DYNAMIC(dspoit)
 
 public:
-	dspoit(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êý
+	dspoit(CWnd* pParent = NULL);   // ï¿½ï¿½×¼ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	virtual ~dspoit();
+	void dspoit::writehis(int m);
 
-// ¶Ô»°¿òÊý¾Ý
+// ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum { IDD = IDD_DIALOG6 };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§ï¿½ï¿½
 
 	DECLARE_MESSAGE_MAP()
 public:
