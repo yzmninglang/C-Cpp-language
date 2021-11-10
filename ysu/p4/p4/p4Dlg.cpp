@@ -93,17 +93,16 @@ void Cp4Dlg::OnPaint()
 	else
 	{
 	CPaintDC   dc(this);    
-    CRect rect;    
-    GetClientRect(&rect);    
-    CDC   dcMem;    
-    dcMem.CreateCompatibleDC(&dc);    
-    CBitmap   bmpBackground;    
-    bmpBackground.LoadBitmap(IDB_BITMAP2);  //对话框的背景图片  
-                        
-    BITMAP   bitmap;    
-    bmpBackground.GetBitmap(&bitmap);    
-    CBitmap   *pbmpOld=dcMem.SelectObject(&bmpBackground);    
-     dc.StretchBlt(0,0,rect.Width(),rect.Height(),&dcMem,0,0,bitmap.bmWidth,bitmap.bmHeight,SRCCOPY);  
+ //   CRect rect;    
+ //   GetClientRect(&rect);    
+ //   CDC   dcMem;    
+ //   dcMem.CreateCompatibleDC(&dc);    
+ //   CBitmap   bmpBackground;    
+ //   bmpBackground.LoadBitmap(IDB_BITMAP2);  //对话框的背景图片                   
+ //   BITMAP   bitmap;    
+ //   bmpBackground.GetBitmap(&bitmap);    
+ //   CBitmap   *pbmpOld=dcMem.SelectObject(&bmpBackground);    
+ //    dc.StretchBlt(0,0,rect.Width(),rect.Height(),&dcMem,0,0,bitmap.bmWidth,bitmap.bmHeight,SRCCOPY);  
 
 	}
 }
