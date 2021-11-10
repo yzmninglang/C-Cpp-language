@@ -22,6 +22,21 @@
     <None Include="res\p4.ico">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="res\linkwe.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\linkwe.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ba.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\back.bmp">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p4.h">

@@ -52,6 +52,10 @@ END_MESSAGE_MAP()
 BOOL Cp4Dlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
+	CRect rect;
+	GetDlgItem(IDC_STATIC_p1)->GetWindowRect(&rect);           //IDC_WAVE_DRAW为Picture Control的ID
+	ScreenToClient(&rect);
+	GetDlgItem(IDC_STATIC_p1)->MoveWindow(rect.left, rect.top, 225, 50, true);    //固定Picture Control控件的大小
 
 	// 设置此对话框的图标。当应用程序主窗口不是对话框时，框架将自动
 	//  执行此操作
@@ -88,7 +92,19 @@ void Cp4Dlg::OnPaint()
 	}
 	else
 	{
-		CDialogEx::OnPaint();
+	CPaintDC   dc(this);    
+    CRect rect;    
+    GetClientRect(&rect);    
+    CDC   dcMem;    
+    dcMem.CreateCompatibleDC(&dc);    
+    CBitmap   bmpBackground;    
+    bmpBackground.LoadBitmap(IDB_BITMAP2);  //对话框的背景图片  
+                        
+    BITMAP   bitmap;    
+    bmpBackground.GetBitmap(&bitmap);    
+    CBitmap   *pbmpOld=dcMem.SelectObject(&bmpBackground);    
+     dc.StretchBlt(0,0,rect.Width(),rect.Height(),&dcMem,0,0,bitmap.bmWidth,bitmap.bmHeight,SRCCOPY);  
+
 	}
 }
 

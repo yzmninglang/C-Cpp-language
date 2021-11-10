@@ -1,12 +1,15 @@
-﻿Build started 10/28/2021 8:34:30 PM.
+﻿Build started 11/2/2021 8:04:11 AM.
      1>Project "E:\C-Cpp-language\ysu\Three\Three\Three.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Three.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         D:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt atm.cpp
+         D:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt atm.cpp main.cpp
          atm.cpp
      1>e:\c-cpp-language\ysu\three\three\atm.cpp(431): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\vs2010\vc\include\time.inl(112) : see declaration of 'localtime'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         main.cpp
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -29,4 +32,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.81
+Time Elapsed 00:00:01.00

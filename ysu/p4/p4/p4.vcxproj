@@ -96,6 +96,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
+    <None Include="res\ba.bmp" />
+    <None Include="res\back.bmp" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\linkwe.bmp" />
+    <None Include="res\linkwe.png" />
     <None Include="res\p4.ico" />
     <None Include="res\p4.rc2" />
   </ItemGroup>
