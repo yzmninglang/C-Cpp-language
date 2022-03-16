@@ -7,7 +7,7 @@
 *.ipch
 Qt/*Desktop*/
 ysu/p4/p4/Debug/
-ysu/p4/p4/Debug/
-ysu/p4/Debug/
+ysu/p4/p4/Release/
+ysu/p4/Debug
 ysu/p4/Release/
 ysu/p4/Debug/
