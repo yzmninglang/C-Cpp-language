@@ -1,36 +1,58 @@
-﻿生成启动时间为 10/10/2021 10:23:58 AM。
-     1>项目“E:\Document\Visual Studio 2010\Projects\p4\p4\p4.vcxproj”在节点 2 上(build 个目标)。
+﻿Build started 11/12/2021 9:55:44 AM.
+     1>Project "E:\C-Cpp-language\ysu\p4\p4\p4.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         正在对“Release\p4.unsuccessfulbuild”执行 Touch 任务。
+         Creating "Release\p4.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         所有输出均为最新。
-         所有输出均为最新。
+         D:\VS2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\p4.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\VS2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\p4.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt balan.cpp ChangePassWord.cpp dspoit.cpp p4.cpp p4Dlg.cpp person.cpp qhis.cpp qury.cpp receipt.cpp reg.cpp SystemCate.cpp tranf.cpp trans.cpp wdraw.cpp
+         balan.cpp
+     1>balan.cpp(51): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         ChangePassWord.cpp
+         dspoit.cpp
+         p4.cpp
+     1>p4.cpp(64): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\VS2010\VC\include\time.inl(112) : see declaration of 'localtime'
+         p4Dlg.cpp
+         person.cpp
+     1>person.cpp(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         qhis.cpp
+         qury.cpp
+         receipt.cpp
+         reg.cpp
+         SystemCate.cpp
+         tranf.cpp
+         trans.cpp
+         wdraw.cpp
        ResourceCompile:
-         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /l"0x0804" /IRelease\ /nologo /fo"Release\p4.res" p4.rc 
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /l"0x0804" /IRelease\ /nologo /fo"Release\p4.res" p4.rc 
        Link:
-         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\p4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.lib" /MACHINE:X86 Release\p4.res
+         D:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\C-Cpp-language\ysu\p4\Release\p4.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\p4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\C-Cpp-language\ysu\p4\Release\p4.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\C-Cpp-language\ysu\p4\Release\p4.lib" /MACHINE:X86 Release\p4.res
          Release\balan.obj
          Release\ChangePassWord.obj
          Release\dspoit.obj
          Release\p4.obj
          Release\p4Dlg.obj
          Release\person.obj
+         Release\qhis.obj
          Release\qury.obj
+         Release\receipt.obj
+         Release\reg.obj
          Release\stdafx.obj
          Release\SystemCate.obj
          Release\tranf.obj
          Release\trans.obj
          Release\wdraw.obj
-         正在生成代码
-         已完成代码的生成
-         p4.vcxproj -> E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe
+         Generating code
+         Finished generating code
+         p4.vcxproj -> E:\C-Cpp-language\ysu\p4\Release\p4.exe
        Manifest:
-         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Document\Visual Studio 2010\Projects\p4\Release\p4.exe;#1" /manifest Release\p4.exe.intermediate.manifest D:\VS2010\VC\Include\Manifest\dpiaware.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\C-Cpp-language\ysu\p4\Release\p4.exe;#1" /manifest Release\p4.exe.intermediate.manifest D:\VS2010\VC\Include\Manifest\dpiaware.manifest
        FinalizeBuildStatus:
-         正在删除文件“Release\p4.unsuccessfulbuild”。
-         正在对“Release\p4.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\Document\Visual Studio 2010\Projects\p4\p4\p4.vcxproj”(build 个目标)的操作。
+         Deleting file "Release\p4.unsuccessfulbuild".
+         Touching "Release\p4.lastbuildstate".
+     1>Done Building Project "E:\C-Cpp-language\ysu\p4\p4\p4.vcxproj" (build target(s)).
 
-生成成功。
+Build succeeded.
 
-已用时间 00:00:03.92
+Time Elapsed 00:00:07.68

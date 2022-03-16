@@ -2,3 +2,4 @@ yuzhimin 1234 yuzhimin 251 0
 zhangtuo 12345 12345 1048 1
 yuzimin 12342 1234 -1000 0
 zhangxiaoming 5021314 12345 0 1
+yu 7777 7777 1000 0
