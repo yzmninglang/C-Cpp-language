@@ -335,3 +335,11 @@ void Person<T1,T2>::show() //由于是类模板，所以在作用域的后面要
 
 [源代码](./func_out.cpp)
 
+## 模板实例
+
+自定义类型数组
+
+实现，尾部删除，添加，数组赋值等功能
+
+[源项目](./sample/template_ex2/template_ex2.vcxproj)
+
