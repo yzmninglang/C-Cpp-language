@@ -1,57 +1,37 @@
-//#include<iostream>
-//using namespace std;
-//#include"SeqList.h"	
-////#include "SingleList.h"
+#include <iostream>
+using namespace std;
+//#include"SeqList.h"
 //void main()
 //{
-//	//SeqList<int> L(10);
-//	SeqList<int>L(10);
-//	L.Insert(-1,21); 
-//	L.Insert(0,23); 
-//	L.Insert(1,14); 
-//	L.Insert(2,5);
-//	L.Insert(3,56); 
-//	L.Insert(4,17);
-//	L.Insert(5,31);
-//	cout<<"顺序表的长度： "<<L.Length();
-//	cout<<"   顺序表的元素为：  ";
-//	L.Output(cout);
-//	L.Insert(2,68);
-//	cout<<"顺序表的长度： "<<L.Length();
-//	cout<<"   插入元素68：          ";
-//	L.Output(cout);
-//	L.Delete(5);
-//	cout<<"顺序表的长度： "<<L.Length();
-//	cout<<"   删除元素56：          ";
-//	L.Output(cout);
-//	system("pause");
-//} 
- 
+//    SeqList<int>L(10);
+//    int L_[]={21,23,14,5,56,17,31};
+//    for(int i=-1;i<6;i++)
+//        L.Insert(i,L_[i+1]);
+//    //初始化顺序表
+//    L.Output(cout);
+//    cout<<"Length:"<<L.Length()<<endl<<endl;    //输出表长度
+//    L.Insert(L.Search(14),68);  //14后面插入68
+//    L.Delete(L.Search(56)); //删除56
+//    L.Output(cout); //输出顺序表
+//    system("pause");
+//}
 
 
 
-#include<iostream>
-using namespace std;
-//#include"SeqList.h"	
-#include "SingleList.h"
+//#include <iostream
+//using namespace std;
+#include"SingleList.h"
 void main()
 {
-	//SeqList<int> L(10);
-	SingleList<int>SL;
-	SL.Insert(-1,1); 
-	SL.Insert(0,2); 
-	SL.Insert(1,4); 
-	SL.Insert(2,5);
-	//cout<<"单向链表的长度： "<<SL.Length();
-	cout<<"   顺序表的元素为：  ";
-	SL.Output(cout);
-	SL.Insert(0,3);
-	//cout<<"单向链表的长度： "<<SL.Length();
-	cout<<"   插入元素3：          ";
-	SL.Output(cout);
-	SL.Delete(2);
-	//cout<<"顺序表的长度： "<<SL.Length();
-	cout<<"   删除元素5：          ";
-	SL.Output(cout);
-	system("pause");
-} 
+    SingleList<int>SL;
+    int SL_[]={1,2,4,5};
+    for(int i=-1;i<3;i++)
+    {
+        SL.Insert(i,SL_[i+1]);//初始化单向链表
+    }
+    SL.Output(cout);//输出修改前的单链表
+    SL.Insert(SL.Search(2),3);//在值为2的节点后面插入值为3的节点
+    SL.Delete(SL.Search(5));//删除值为5的节点
+    SL.Output(cout);//输出修改后单链表
+    system("pause");
+}
