@@ -4,7 +4,7 @@
 
 * [数据结构与算法](./data_and_algorithm/README.md)
 
-
+* [线性表](./LinearList/README.md)
 
 
 
