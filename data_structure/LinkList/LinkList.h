@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 #include"Node.h"
 template<class T>
