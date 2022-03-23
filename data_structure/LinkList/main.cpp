@@ -5,8 +5,9 @@ using namespace std;
 
 int main()
 {
-    LinkList<int> L;
-    L.Insert(0,1);
+    int a[]={1,2,3,2,3};
+    LinkList<int> L(a,5);
+    // L.Insert(0,1);
     L.Print();
     return 1;
     

@@ -80,7 +80,6 @@ int LinkList<T>::Search(T data)
 template<class T>
 void LinkList<T>::Insert(int i,T data) //第一位标号是1,插入至第i位的后面
 {
-    int loc=0;
     Node<T> *p=first;
     Node<T> *paf;
     for(int j=0;j<i;j++)
@@ -118,6 +117,6 @@ void LinkList<T>::Print()
     if(p!=NULL)         //从表头开始，一直向下遍历
     {
         p=p->next;
-        cout<<p->data;
+        cout<<p->data<<endl;
     }
 }
