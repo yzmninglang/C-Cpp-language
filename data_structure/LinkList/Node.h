@@ -1,6 +1,15 @@
-template<typename T>
-struct Node{
-	T data;	//Êı¾İÓò
-	Node<T> *next;  //Ö¸ÕëÓò
 
-}
+
+class LinkList;
+template<class T>
+class Node
+{
+private:
+    /* data */
+    friend class LinkList;
+    Node *next;
+    T data;
+
+};
+
+
