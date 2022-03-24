@@ -154,3 +154,128 @@ graph LR
 ```
 
 单链表在实现的功能其实和之前的线性表差不多，因为他们的结果是一致的，只是使用的储存方式存在差异，所以，单链表的实现主要是注重链表的数据储存方式
+
+### 有参构造和无参构造
+
+#### 无参构造
+
+对于无参构造，我们希望在刚开始的时候实现一个指针和一个头节点
+
+```mermaid
+graph LR
+p[指针]-->head(头结点)
+```
+
+那么我们后期的使用方式为
+
+```cpp
+LinkList<int> L;
+L.Insert(0,1);
+L.Insert(1,2);
+L.Insert(2,19);
+```
+
+这是，构造函数需要给`first`指针指向一个`data`为空的头节点
+
+```cpp
+template<class T>
+LinkList<T>::LinkList(/* args */)
+{
+    first= new Node<T>;         //生成头结点
+    this->n=0;
+}
+```
+
+#### 有参构造
+
+传递的参数为一个数组，使用数组初始化该链表，所以在构造函数中也需要实现`first`指针指向`head`,然后往后添加
+
+```cpp
+template<class T>
+LinkList<T>::LinkList(T a[],int b)
+{
+    first=new Node<T>; //表头结点
+    Node<T> *p,*ptr;
+    p=first;   //首先指向表头的指针
+    for (int i = 0; i < b; i++)
+    {
+        ptr=new Node<T>;
+        ptr->data=a[i];
+        p->next=ptr;
+        p=p->next;
+    }
+    this->n=b;
+}
+```
+
+这里一定要切记，Node任何时候使用的时候都要加上`<T>`，并且，数组的传值实质上指针的传值，<font color='red'>因此我们必须要将数组的大小传入函数之中</font>
+
+### 析构函数
+
+析构函数主要是需要一个一个逐一的销毁节点，那么由于不是使用for循环来进行，而是判断条件`p!=NULL`来判断，所以`while`，每到一个结点，用指针指向下一个结点，然后删除此节点
+
+### Search函数
+
+Search函数和析构函数一样，要用while来判断
+
+```cpp
+template<class T>
+int LinkList<T>::Search(T data)
+{
+    Node<T> *p;
+    p=first->next;
+    int loc=0;
+    while(p!=NULL && p->data!=data)   //这种地方的while必须要记清楚
+    {
+        p=p->next;  //如果data不匹配以及没有到表的最后一位，那么需要前行
+        loc++;
+    }
+    if(p==NULL)
+    {
+        return -1;  //没找到，返回-1
+    }
+    else{
+        return loc; //找到了，返回位置编码,（第一位是1）
+    }
+}
+```
+
+### Insert函数
+
+在遍历的时候加上n++
+
+```cpp
+template<class T>
+void LinkList<T>::Insert(int i,T data) //第一位标号是1,插入至第i位的后面
+{
+    Node<T> *p=first;
+    Node<T> *paf;
+    for(int j=0;j<i;j++)
+    {
+        p=p->next;
+    }
+    paf=new Node<T>;
+    paf->data=data;   //创建一个结点，该结点的数值为data
+    paf->next=p->next;  //将p的next传入paf的next
+    p->next=paf;    //将p->next指向paf的结点
+}
+```
+
+[总项目](./LinkList)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
