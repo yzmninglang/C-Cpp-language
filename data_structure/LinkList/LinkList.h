@@ -24,7 +24,7 @@ public:
 template<class T>
 LinkList<T>::LinkList(/* args */)
 {
-    first=NULL;
+    first= new Node<T>;         //生成头结点
     this->n=0;
 }
 
@@ -61,9 +61,9 @@ template<class T>
 int LinkList<T>::Search(T data)
 {
     Node<T> *p;
-    p=first;
+    p=first->next;
     int loc=0;
-    if(p!=NULL && p->data!=data)
+    while(p!=NULL && p->data!=data)   //这种地方的while必须要记清楚
     {
         p=p->next;  //如果data不匹配以及没有到表的最后一位，那么需要前行
         loc++;
@@ -114,10 +114,10 @@ bool LinkList<T>::Delete(int i) //这里的i是从1开始
 template<class T>
 void LinkList<T>::Print()
 {
-    Node<T> *p=first;
-    if(p!=NULL)         //从表头开始，一直向下遍历
-    {
-        p=p->next;
+    Node<T> *p=first->next;
+    while(p!=NULL)         //从表头开始，一直向下遍历
+    {   
         cout<<p->data<<endl;
+        p=p->next;
     }
 }
